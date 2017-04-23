@@ -19,3 +19,9 @@ while True:
         var2 = raw_input("Would you like to play again: ")
         if var2 == "Yes" or var2 == "yes":
             print "We'll play again!"
+        else:
+            break
+    elif var < num:
+        print "Your guess is too low!"
+        var =  raw_input("Guess again: ")
+    
