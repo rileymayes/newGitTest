@@ -6,22 +6,32 @@ Created on Sun Apr 23 17:06:25 2017
 """
 import random
 
-while True:
-    num = random.randint(1,6)
+def valid_number(s):
+    if s.isdigit() and 1 <= int(s) <= 3
+        return True
+    else:
+        return False
+
+def main():
+    num = random.randint(1,3)
+    number_guesses = 0
     var = raw_input("Would you like to guess a number: ")
     print "You entered: ", var, "Let's check!"
-    try: 
-        val = int(var)
-    except ValueError:
-        "That's not an integer!"
-    if var == num:
-        print "You answered correctly!"
-        var2 = raw_input("Would you like to play again: ")
-        if var2 == "Yes" or var2 == "yes":
-            print "We'll play again!"
+    while not False:
+        if not valid_number(guess):
+            guess = raw_input("That isn't a number. Please pick a number: ")
+            continue
         else:
+            number_guesses = +=1
+            guess = int(guess)
+        
+        if var == num:
+            print "You answered correctly!"
+            print "It took", number_guesses, "to get the answer."
             break
-    elif var < num:
-        print "Your guess is too low!"
-        var =  raw_input("Guess again: ")
-    
+        elif var < num:
+            print "Your guess is too low!"
+            var =  raw_input("Guess again: ")
+        elif var > num:
+            print "Your guess is too high!"
+            var =raw_input("Guess again: ")
